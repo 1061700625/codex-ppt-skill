@@ -1,34 +1,10 @@
 # Codex PPT Skill
 
-**简体中文** · [English](README_en.md) · [한국어](README_ko.md)
-
-[![文档](https://img.shields.io/badge/%E6%96%87%E6%A1%A3-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-111827)](https://ningzimu.github.io/codex-ppt-skill/#/) [![支持](https://img.shields.io/badge/%E6%94%AF%E6%8C%81-%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9-2CA5E0)](https://t.me/CodexPPT) [![ClawHub](https://img.shields.io/badge/ClawHub-codex--ppt-cd3b35)](https://clawhub.ai/ningzimu/codex-ppt) [![ClawMama](https://img.shields.io/badge/ClawMama-codex--ppt-2CA5E0)](https://app.clawmama.run/skills/5lak48/hermes?utm_source=github&utm_medium=issue&utm_campaign=skill_outreach_ningzimu_codex_ppt_skill) [![GitHub stars](https://img.shields.io/github/stars/ningzimu/codex-ppt-skill?style=flat&logo=github&label=stars)](https://github.com/ningzimu/codex-ppt-skill/stargazers) [![GitHub forks](https://img.shields.io/github/forks/ningzimu/codex-ppt-skill?style=flat&logo=github&label=forks)](https://github.com/ningzimu/codex-ppt-skill/forks)
-
 一个面向 Codex 的 PPT 生成 skill，也可在 Claude Code、OpenClaw、Hermes Agent 等支持 `SKILL.md` 的 agent 中使用；在这些非 Codex 环境中通常需要配置 `gpt-image-2.5-flare`、第三方生图 API 或 OpenAI 兼容格式的生图接口。它把文章、报告、论文、课程笔记等内容转换成“整页图片式”的演示文稿：先规划大纲和视觉风格，再生成每页幻灯片图片，最后用本地脚本组装为 `.pptx`。
 
-https://github.com/user-attachments/assets/ad0fa884-87e4-4528-8030-f2dd0211693c
+使用`codex-ppt` 生成图片，再用 `image-to-editable-ppt` 将图片转为可编辑页。
 
-## 赞助
-
-<table>
-<tr>
-<td width="180"><img src="assets/atlas-cloud-logo.png" alt="Atlas Cloud" width="160"></td>
-<td>感谢 <a href="https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=codex-ppt-skill">Atlas Cloud</a> 赞助本项目。AtlasCloud 是多模态 AI 推理平台，提供统一 API 接入图片生成、视频生成和大语言模型等能力；本 skill 已支持通过现有 API key、base URL 和模型名配置接入 AtlasCloud 的 GPT Image 2 生图和编辑图接口，按量计费，开箱即用。完整模型列表可查看 <a href="https://www.atlascloud.ai/zh/models">Atlas Cloud 模型页</a>。</td>
-</tr>
-<tr>
-<td width="180" align="center"><img src="assets/codia-noteslide-logo.png" alt="Codia NoteSlide" width="64"><br><strong>Codia NoteSlide</strong></td>
-<td>让生成的幻灯片变得可编辑。将 Codex PPT 生成的幻灯片图片、PDF 或 NotebookLM 导出的演示文稿转换为可编辑 PowerPoint。转换快、价格亲民、还原效果好，适合批量图片转 PPT 和高频交付。 <a href="https://codia.ai/noteslide/r/12daee802"><strong>体验 Codia NoteSlide →</strong></a></td>
-</tr>
-</table>
-
-## 温馨提示
-
-> [!TIP]
-> 本 skill 负责从文章、报告、大纲或想法生成图片式 PPT，适合强视觉表达，但页面元素本身不可直接编辑。如果你需要进一步转换成可编辑 PPT，可以在生成完成后尝试使用 [image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill) 进行转换。
->
-> 关于 `codex-ppt` 和 `image-to-editable-ppt` 这两个技能的详细介绍，参见 [skill_duo_intro.pdf](assets/skill_duo_intro.pdf)。该 PPT 由 `codex-ppt` skill 生成，提示词为：“请分别阅读 Codex PPT和 Image to Editable PPT 这两个技能的内容，然后用 Codex PPT 帮我做一个PPT吧，20页，每个技能的介绍10页。”
->
-> 另外，关于这个 PPT Skill 设计和调优的实践经验，可以看这篇文章：[2000 个 GitHub Star 换来的经验：好的 AI Skill 是调出来的，不是写出来的](https://mp.weixin.qq.com/s/LaxWBX-nogHPpSxlk-Vs8Q)。
+> https://github.com/ningzimu/codex-ppt-skill
 
 > [!NOTE]
 > 想查看更多用户用这个 skill 做出的 PPT 效果，可以前往置顶 Issue 的案例展示区：[欢迎分享 codex-ppt 使用案例和 PPT 效果](https://github.com/ningzimu/codex-ppt-skill/issues/34)。
